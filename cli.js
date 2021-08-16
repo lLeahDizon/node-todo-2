@@ -1,9 +1,10 @@
 #!/user/bin/env node
 const program = require('commander')
 const api = require('./index')
+const pkg = require('./package.json')
 
 program
-  .option('-x, --xxx', 'what the x')
+  .version(pkg.version)
 program
   .command('add')
   .arguments('[task...]')
